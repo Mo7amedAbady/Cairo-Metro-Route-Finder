@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-l1: #ef4444; /* Crimson Red for Line 1 */
+  --color-l2: #3b82f6; /* Royal Blue for Line 2 */
+  --color-l3: #10b981; /* Emerald Green for Line 3 */
+  --color-ts: #f59e0b; /* Amber/Gold for Transfer Stations */
+  --font-sans: 'Plus Jakarta Sans', 'Inter', 'Cairo', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom global animations and scrollbars */
+html {
+  scroll-behavior: smooth;
+  background-color: #0b0f19;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: #f1f5f9;
+  background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.05), transparent 40%),
+              radial-gradient(circle at 10% 50%, rgba(59, 130, 246, 0.08), transparent 50%),
+              radial-gradient(circle at bottom left, rgba(239, 68, 68, 0.05), transparent 40%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+/* Pulse animation for active routes and maps */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.6;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.7);
+  }
+}
+
+.pulse-glow-blue {
+  animation: pulse-glow 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s infinite ease-in-out;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(15, 23, 42, 0.8);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.25), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
