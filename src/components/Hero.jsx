@@ -83,41 +83,6 @@ function Hero() {
               </button>
             </motion.div>
 
-            {/* Badges/Stats section */}
-            <motion.div 
-              className="grid grid-cols-1 md:grid-cols-3 gap-6 border-t border-white/5 pt-8 max-w-4xl mx-auto"
-              variants={itemVariants}
-            >
-              <div className="flex flex-col items-center text-center gap-3">
-                <div className="p-1.5 bg-red-500/15 border border-red-500/20 rounded-lg text-red-400 mt-0.5">
-                  <Zap className="h-3.5 w-3.5" />
-                </div>
-                <div>
-                  <h4 className="text-xs font-bold text-slate-200">{t('shortest_path')}</h4>
-                  <p className="text-[10px] text-slate-400">{t('calculated_via_bfs')}</p>
-                </div>
-              </div>
-
-              <div className="flex flex-col items-center text-center gap-3">
-                <div className="p-1.5 bg-blue-500/15 border border-blue-500/20 rounded-lg text-blue-400 mt-0.5">
-                  <RefreshCw className="h-3.5 w-3.5" />
-                </div>
-                <div>
-                  <h4 className="text-xs font-bold text-slate-200">{t('transfer_station')}</h4>
-                  <p className="text-[10px] text-slate-400">{t('optimal_lines_swap')}</p>
-                </div>
-              </div>
-
-              <div className="flex flex-col items-center text-center gap-3">
-                <div className="p-1.5 bg-emerald-500/15 border border-emerald-500/20 rounded-lg text-emerald-400 mt-0.5">
-                  <Compass className="h-3.5 w-3.5" />
-                </div>
-                <div>
-                  <h4 className="text-xs font-bold text-slate-200">{t('easy_planning')}</h4>
-                  <p className="text-[10px] text-slate-400">{t('visual_station_timeline')}</p>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </motion.div>
       </div>
