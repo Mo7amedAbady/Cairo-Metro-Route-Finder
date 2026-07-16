@@ -27,7 +27,7 @@ function Navbar() {
       <div className="flex items-center gap-3">
         <LanguageToggle />
         <a 
-          href="https://github.com" 
+          href="https://github.com/Mo7amedAbady" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="text-slate-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-white/5 flex items-center justify-center"
